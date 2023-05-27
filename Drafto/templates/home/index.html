@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/act.css' %}">
+    <title>Rejex-Temp Calulator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    </script>
+</head>
+<body>
+    <div class="temperature-calculator">
+        <div class="container">
+            <div class="name-greeting-holder">
+                <div class="greeting">Good morning <span>john</span></div>
+                <div class="blink">|</div>
+            </div>
+            <div class="temperature-calculator-holder">
+                <div class="temperature-holder">
+                    <div class="calculator-keys">
+                        <div class="first-keys">
+                            <button class="del-key key">d</button>
+                            <button class="del-all-key key">del</button>
+                            <div class="dot-key-holder">
+                                <button class="dot-key">&dot;</button>
+                            </div>
+                        </div>
+                        <div class="second-keys">
+                            <button class="key">7</button>
+                            <button class="key">8</button>
+                            <button class="key">9</button>
+                        </div>
+                        <div class="third-keys">
+                            <button class="key">4</button>
+                            <button class="key">5</button>
+                            <button class="key">6</button>
+                        </div>
+                        <div class="fourth-keys">
+                            <button class="key">1</button>
+                            <button class="key">2</button>
+                            <button class="key">3</button>
+                        </div>
+                        <div class="fifth-keys">
+                            <button class="plus key">+</button>
+                            <button class="zero key">0</button>
+                            <button class="minus key">-</button>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <div class="temp_value" name="temperature" id="temperature" contenteditable="true">0</div>
+                        <select name="from_temp" id="from_temp">
+                            <option value="celsius">Celsius</option>
+                            <option value="kelvin">Kelvin</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                        </select>
+                        <br>
+                        <div class="result" id="converted"></div>
+                        <select name="to_temp" id="to_temp">
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="celsius">Celsius</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                        <br>
+                    </div>
+                </div>
+                <div class="attribution-holder">
+                    <p class="attribution">&copy; copyright coded by <span>Boss(Aniebiet)</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{% static 'js/act.js' %}"></script>
+</html>
