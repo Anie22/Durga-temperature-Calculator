@@ -7,7 +7,7 @@ def temperature_converter(request):
     return render(request, 'home/index.html')
 
 def convert_temperature(request):
-    temperature = request.GET.get('temperature')
+    temperature = request.GET.get('temperature', '0')
     from_unit = request.GET.get('from_unit')
     to_unit = request.GET.get('to_unit')
 
@@ -18,14 +18,14 @@ def convert_temperature(request):
 
     if from_unit == 'celsius':
         if to_unit == 'fahrenheit':
-            converted = (temperature * 1.8) + 32
+            converted = (temperature * 9/5) + 32
         elif to_unit == 'kelvin':
             converted = temperature + 273.15
         else:
             converted = temperature
     elif from_unit == 'fahrenheit':
         if to_unit == 'celsius':
-            converted = (temperature - 32) / 1.8
+            converted = (temperature - 32) * 5/9
         elif to_unit == 'kelvin':
             converted = (temperature + 459.67) * 5 / 9
         else:

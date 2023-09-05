@@ -94,8 +94,8 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     width: 100%;
+    flex-direction: column;
     gap: 6em;
 }
 @media screen and (max-width: 600px) {
@@ -105,15 +105,18 @@ span{
 }
 
 .temperature-holder{
+    max-width: 100%;
+}
+
+.temperature-holder{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: fit-content;
     height: fit-content;
     border-radius: 15px;
     background: #f8f4f4;
-    padding: 6px;
-    gap: 12em;
+    padding: 12px;
+    gap: 6em;
     margin-top: 40px;
 }
 @media screen and (max-width: 600px) {
@@ -202,7 +205,7 @@ span{
 }
 
 .dot-key{
-    padding-top: 30px;
+    padding-bottom: 30px;
     font-size: 55px;
 }
 
@@ -214,13 +217,18 @@ span{
 
 .form{
     margin-right: 9px;
+    width: fit-content;
 }
 
 .temp_value,
 .result{
+    max-width: 100%;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 5em;
+    font-size: 55px;
     font-weight: 100;
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 @media screen and (max-width: 600px) {
     .temp_value,
