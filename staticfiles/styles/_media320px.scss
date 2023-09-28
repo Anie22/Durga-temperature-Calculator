@@ -1,0 +1,123 @@
+@media screen and (max-width: 320px) {
+    .temperature-calculator {
+    
+        .container{
+    
+            .greeting{
+                font-size: 22px;
+            }
+        }
+    }
+
+    .history-holder {
+    
+        .container {
+    
+            .history-conversion-holder {
+    
+                .history {
+    
+                    .history-flex{
+    
+                        .first-table{
+    
+                            thead {
+    
+                                tr {
+                                    
+                                    .th-col{
+                                        padding-left: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .register {
+
+        .form-holder{
+
+            form {
+    
+                fieldset{
+        
+                    div {
+        
+                        input{
+                            width: 260px; 
+                        }
+                    }
+        
+                    .name {
+        
+                        div {
+            
+                            input{
+                                width: 122px; 
+                            }
+                        }
+                    }
+                    
+                    button {
+                        width: 265px; 
+                    }
+                }
+            }
+        }
+    }
+
+    .login {
+    
+        .form-holder {
+
+            form {
+    
+                fieldset {
+        
+                    div {
+        
+                        input{
+                            width: 260px; 
+                        }
+                    }
+                    button {
+                        width: 265px; 
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .delete {
+
+        .container {
+            padding: 0 11px;
+        }
+    }
+
+    .delete-all {
+        
+        .container {
+            padding: 0 20px;
+
+            .inner-container {
+                width: 300px; 
+                padding: 6px;
+        
+        
+                form {
+                    gap: 6px;
+        
+                    p {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}

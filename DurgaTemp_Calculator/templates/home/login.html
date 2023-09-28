@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <title>Durga-Temp Calulator</title>
+</head>
+<body>
+    <div class="login">
+        <header>
+            <nav>
+                <div class="name-greeting-holder">
+                    <h2 class="logo">Durga</h2>
+                </div>
+            </nav>
+        </header>
+        <div class="form-holder">
+            <form method="post">
+                {% csrf_token %}
+                <fieldset>
+                    <legend>Durga temperature calculator</legend>
+                    <div class="greeting">
+                        <h3>Welcome</h3>
+                        <p >Login to continue</p>
+                    </div>
+                    <div>
+                        <label for="username">User Name</label><br>
+                        <input type="text" name="username" id="username" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label><br>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="alt-text">
+                        <p>Don't have an account <a href="{% url 'home:register' %}">Signup</a></p>
+                    </div>
+                    <button type="submit">Login</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="attribution-holder">
+            <p class="attribution">&copy; copyright 2023 coded by <span>Boss(Aniebiet)</span></p>
+        </div>
+    </div>
+</body>
+</html>

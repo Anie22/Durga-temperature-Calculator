@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <title>Durga-Temp Calulator</title>
+</head>
+<body>
+    <div class="delete-all">
+        <header>
+            <nav>
+                <div class="name-greeting-holder">
+                    <h2 class="logo">Durga</h2>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="inner-container">
+                <form method="post" action="{% url 'home:history' %}">
+                    {% csrf_token %}
+                    <div class="buttons">
+                        <button type="submit">Yes, sure</button>
+                        <a href="{% url 'home:history' %}">No, back</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="attribution-holder">
+            <p class="attribution">&copy; copyright 2023 coded by <span>Boss(Aniebiet)</span></p>
+        </div>
+    </div>
+</body>
+</html>

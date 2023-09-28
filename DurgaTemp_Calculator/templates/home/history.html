@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/style.js' %}"></script>
+    <title>Durga-Temp Calulator || My History</title>
+</head>
+<body>
+    <div class="history-holder">
+        <div class="container">
+            <div class="history-title">
+                <h1>Conversion History</h1>
+            </div>
+            <div class="history-conversion-holder">
+                <div class="history">
+                    <div class="delete-history">
+                        <a href="{% url 'home:temperature_converter' %}">back</a>
+                        {% if conversion_history_results %}
+                            <a href="{% url 'home:delete_all' %}">delete all</a>
+                        {% endif %}
+                    </div>
+                    <div class="history-flex" id="flex">
+                        {% if conversion_history_results %}
+                            <table class="first-table" id="table">
+                                <thead>
+                                    <tr>
+                                        <th class="th-col">My conversions</th>
+                                        <th class="th-col-2">Date and Time</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            {% for conversion_history_result in conversion_history_results %}
+                                <table class="conversions">
+                                    <tbody>
+                                        <tr>
+                                            <td class="td-row">{{conversion_history_result.temperature}}<sup>&compfn;</sup> {{conversion_history_result.from_unit}} equals to {{conversion_history_result.converted}}<sup>&compfn;</sup> {{conversion_history_result.to_unit}}</td>
+                                            <td>{{conversion_history_result.created_at}}</td>
+                                            <td class="del"><a href="{% url 'home:delete' conversion_history_result.id %}">&times;</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            {% endfor %}
+                        {% else %}
+                            <div>
+                              <p>You have not done any conversions yet.</p>
+                            </div>
+                          {% endif %}
+                    </div>
+                </div>
+                <footer class="attribution-holder">
+                    <p class="attribution">&copy; copyright 2023 coded by <span>Boss(Aniebiet)</span></p>
+                </footer>
+           </div>
+        </div>
+    </div>
+</body>
+</html>

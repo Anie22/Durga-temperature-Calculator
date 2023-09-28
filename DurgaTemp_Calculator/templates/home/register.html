@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <title>Durga-Temp Calulator</title>
+</head>
+<body>
+    <div class="register">
+        <header>
+            <nav>
+                <div class="name-greeting-holder">
+                    <h2 class="logo">Durga</h2>
+                </div>
+            </nav>
+        </header>
+        <div class="form-holder">
+            <form method="post">
+                {% csrf_token %}
+                <fieldset>
+                    <legend class="form-title">Durga temperature calculator</legend>
+                    <div class="greeting">
+                        <h3>Welcome</h3>
+                        <p>Signup to continue</p>
+                    </div>
+                    <div>
+                        <label for="username">User Name</label><br>
+                        <input type="text" name="username" id="username" required>
+                    </div>
+                    <div class="name">
+                        <div>
+                            <label for="first_name">First Name</label><br>
+                            <input type="text" name="firstname" id="firstname" required>
+                        </div>
+                        <div>
+                            <label for="last_name">Last Name</label><br>
+                            <input type="text" name="lastname" id="lastname" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email">Email</label><br>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label><br>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div>
+                        <label for="password">Confirm Password</label><br>
+                        <input type="password" name="confirm_password" id="confirm_password"  required>
+                    </div>
+                    <div class="alt-text">
+                        <p>Already have an account <a href="{% url 'home:login' %}">Login</a></p>
+                    </div>
+                    <button type="submit">SignUp</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="attribution-holder">
+            <p class="attribution">&copy; copyright 2023 coded by <span>Boss(Aniebiet)</span></p>
+        </div>
+    </div>
+</body>
+</html>

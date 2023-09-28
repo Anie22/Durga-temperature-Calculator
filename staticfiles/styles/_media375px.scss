@@ -1,0 +1,95 @@
+@media screen and (max-width: 375px) {
+    .history-holder {
+    
+        .container {
+    
+            .history-conversion-holder {
+    
+                .history {
+    
+                    .history-flex{
+    
+                        div {
+    
+                            p {
+                                font-size: 23px;
+                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .register {
+
+        .form-holder{
+
+            form {
+    
+                fieldset{
+        
+                    div {
+        
+                        input{
+                            width: 300px; 
+                        }
+                    }
+        
+                    .name {
+        
+                        div {
+            
+                            input{
+                                width: 144px; 
+                            }
+                        }
+                    }
+                    
+                    button {
+                        width: 305px; 
+                    }
+                }
+            }
+        }
+    }
+
+    .login {
+    
+        .form-holder {
+
+            form {
+    
+                fieldset {
+        
+                    div {
+        
+                        input{
+                            width: 300px; 
+                        }
+                    }
+                    
+                    button {
+                        width: 305px; 
+                    }
+                }
+            }
+        }
+    }
+
+    .delete-all {
+        
+        .container {
+
+            .inner-container {
+        
+        
+                form {
+                    gap: 8px;
+                }
+            }
+        
+        }
+    }
+}

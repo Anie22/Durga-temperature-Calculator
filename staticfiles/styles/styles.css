@@ -1,0 +1,1161 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.temperature-calculator {
+  background: #5574db;
+  width: 100%;
+}
+.temperature-calculator .container {
+  width: 100%;
+  padding: 15px 0rem;
+  margin: 0px auto;
+}
+.temperature-calculator .container header {
+  width: 100%;
+  background: rgba(72, 201, 233, 0.8823529412);
+  margin-top: -15px;
+  box-shadow: 0px 2px 0px rgba(37, 37, 37, 0.479);
+}
+.temperature-calculator .container header nav {
+  width: 100%;
+}
+.temperature-calculator .container header nav .name-greeting-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+.temperature-calculator .container header nav .name-greeting-holder .logo {
+  font-style: italic;
+  color: #1726f8;
+}
+.temperature-calculator .container header nav .name-greeting-holder ul {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 15px;
+}
+.temperature-calculator .container header nav .name-greeting-holder ul li {
+  list-style: none;
+}
+.temperature-calculator .container header nav .name-greeting-holder ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.temperature-calculator .container .greeting {
+  font-size: 30px;
+  text-transform: capitalize;
+  color: #e7e4e4;
+  font-family: "Space Grotesk", sans-serif;
+  padding: 0 20px;
+  margin: 25px 0;
+}
+.temperature-calculator .container .greeting p {
+  display: flex;
+  align-items: center;
+}
+.temperature-calculator .container .greeting p #greeting {
+  color: #e7e4e4;
+}
+.temperature-calculator .container .greeting p .user {
+  margin-left: 6px;
+  color: #74db55;
+}
+.temperature-calculator .container .greeting p .blink {
+  font-size: 2rem;
+  color: #e7e4e4;
+  animation: blinking 1s linear infinite;
+}
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.temperature-calculator .container .temperature-calculator-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 6em;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 15px !important;
+  background: #f8f4f4;
+  padding: 12px;
+  gap: 6em;
+  margin-top: 10px;
+  max-width: 100%;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 14px;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .first-keys {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .first-keys button {
+  text-align: center;
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 550;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .first-keys .del-key {
+  color: #f8f4f4;
+  background-color: rgba(241, 25, 25, 0.7254901961);
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .first-keys .del-all-key {
+  color: #f8f4f4;
+  background-color: rgba(241, 25, 25, 0.7254901961);
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .first-keys .dot-key-holder {
+  width: 120px;
+  height: 60px;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .first-keys .dot-key-holder button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+  height: inherit;
+  border-radius: 10px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 550;
+  background-color: rgba(163, 159, 159, 0.7254901961);
+  color: #f8f4f4;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .first-keys .dot-key-holder .dot-key {
+  padding-bottom: 30px;
+  font-size: 55px;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .second-keys {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .second-keys button {
+  text-align: center;
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 550;
+  background-color: #e7e4e4;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .third-keys {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .third-keys button {
+  text-align: center;
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 550;
+  background-color: #e7e4e4;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .fourth-keys {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .fourth-keys button {
+  text-align: center;
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 550;
+  background-color: #e7e4e4;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .fifth-keys {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .fifth-keys button {
+  text-align: center;
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 550;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .fifth-keys .zero {
+  background-color: #e7e4e4;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .fifth-keys .plus {
+  color: #f8f4f4;
+  background-color: rgba(163, 159, 159, 0.7254901961);
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .fifth-keys .minus {
+  color: #f8f4f4;
+  background-color: rgba(163, 159, 159, 0.7254901961);
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .form {
+  margin-right: 9px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .form .temp_value {
+  max-width: 100%;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 55px;
+  font-weight: 100;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .form select {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 20px;
+  padding: 22px 5px;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .form select option {
+  font-size: 20px;
+  padding: 22px;
+}
+.temperature-calculator .container .temperature-calculator-holder .temperature-holder .form .result {
+  max-width: 100%;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 55px;
+  font-weight: 100;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.temperature-calculator .container .temperature-calculator-holder .attribution-holder {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: #e7e4e4;
+  letter-spacing: 2px;
+  margin-top: -43px;
+  margin-bottom: 20px;
+}
+.temperature-calculator .container .temperature-calculator-holder .attribution-holder .attribution {
+  font-family: "Space Grotesk", sans-serif;
+}
+.temperature-calculator .container .temperature-calculator-holder .attribution-holder .attribution span {
+  color: #74db55;
+}
+
+.history-holder {
+  background: #5574db;
+  width: 100%;
+}
+.history-holder .container {
+  width: 100%;
+  padding: 15px 0rem;
+  margin: 0px auto;
+}
+.history-holder .container .history-title {
+  width: 100%;
+  margin-top: -15px;
+  background: rgba(72, 201, 233, 0.8823529412);
+  padding: 15px 20px;
+  box-shadow: 0px 2px 0px rgba(37, 37, 37, 0.479);
+}
+.history-holder .container .history-title h1 {
+  font-style: italic;
+  color: #1726f8;
+}
+.history-holder .container .history-conversion-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 6em;
+}
+.history-holder .container .history-conversion-holder .history {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  width: 50%;
+  height: 470px;
+  justify-content: center;
+  border-radius: 15px !important;
+  background: #f8f4f4;
+  padding: 12px;
+  margin-top: 31px;
+  max-width: 100%;
+}
+.history-holder .container .history-conversion-holder .history .delete-history {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 15px;
+  margin-top: 9px;
+}
+.history-holder .container .history-conversion-holder .history .delete-history a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #003cff;
+  font-size: 20px;
+}
+.history-holder .container .history-conversion-holder .history .history-flex {
+  width: 100%;
+  height: inherit;
+  padding-right: 10px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: auto;
+}
+.history-holder .container .history-conversion-holder .history .history-flex .first-table {
+  width: 100%;
+  top: 0;
+  text-align: left;
+  position: sticky;
+  font-size: 25px;
+  z-index: 2;
+  background: #e7e4e4;
+  box-shadow: 2px 3px 2px rgb(41, 40, 40);
+}
+.history-holder .container .history-conversion-holder .history .history-flex .first-table thead tr th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.history-holder .container .history-conversion-holder .history .history-flex .first-table thead tr .th-col {
+  padding-left: 25px;
+}
+.history-holder .container .history-conversion-holder .history .history-flex .first-table thead tr .th-col-2 {
+  padding-left: -30px;
+}
+.history-holder .container .history-conversion-holder .history .history-flex .conversions {
+  padding: 0px 15px;
+  width: 100%;
+}
+.history-holder .container .history-conversion-holder .history .history-flex .conversions tbody {
+  font-size: 15px;
+}
+.history-holder .container .history-conversion-holder .history .history-flex .conversions tbody tr .td-row {
+  padding: 10px 18px;
+}
+.history-holder .container .history-conversion-holder .history .history-flex .conversions tbody tr .del a {
+  color: red;
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.history-holder .container .history-conversion-holder .history .history-flex div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+}
+.history-holder .container .history-conversion-holder .history .history-flex div p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-style: italic;
+  color: #1739f8;
+}
+.history-holder .container .history-conversion-holder .attribution-holder {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: #e7e4e4;
+  letter-spacing: 2px;
+  margin-top: -60px;
+  margin-bottom: 10px;
+}
+.history-holder .container .history-conversion-holder .attribution-holder .attribution {
+  font-family: "Space Grotesk", sans-serif;
+}
+.history-holder .container .history-conversion-holder .attribution-holder .attribution span {
+  color: #74db55;
+}
+
+.register {
+  width: 100%;
+  background: #617fe4;
+}
+.register header {
+  width: 100%;
+  background: rgba(72, 201, 233, 0.8823529412);
+  box-shadow: 0px 2px 0px rgba(37, 37, 37, 0.479);
+}
+.register header nav {
+  width: 100%;
+}
+.register header nav .name-greeting-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+.register header nav .name-greeting-holder .logo {
+  font-style: italic;
+  color: #1726f8;
+}
+.register .form-holder {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px 10px;
+}
+.register .form-holder form {
+  border-radius: 13px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #ffffff;
+  box-shadow: 0px 2px 0px rgba(37, 37, 37, 0.4784313725);
+  border: 1.5px solid rgba(0, 0, 0, 0.5333333333);
+}
+.register .form-holder form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 0 0 13px 13px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid rgba(48, 47, 47, 0.3568627451);
+  outline: none;
+  padding: 0 12px;
+  padding-bottom: 20px;
+}
+.register .form-holder form fieldset .form-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: hsl(251, 98%, 61%);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+.register .form-holder form fieldset .greeting {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 8px 0;
+}
+.register .form-holder form fieldset .greeting h3 {
+  font-size: 25px;
+  color: rgba(0, 0, 255, 0.8784313725);
+}
+.register .form-holder form fieldset .greeting p {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.register .form-holder form fieldset div label {
+  font-size: 18px;
+}
+.register .form-holder form fieldset div input {
+  width: 500px;
+  height: 35px;
+  margin-top: 9px;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid #3407fc;
+}
+.register .form-holder form fieldset .name {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.register .form-holder form fieldset .name div label {
+  font-size: 18px;
+}
+.register .form-holder form fieldset .name div input {
+  width: 240px;
+  height: 35px;
+  margin-top: 9px;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid #3407fc;
+}
+.register .form-holder form fieldset .alt-text {
+  text-align: right;
+  margin: -9px 0;
+}
+.register .form-holder form fieldset .alt-text p a {
+  text-decoration: none;
+  color: #0000ff;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+}
+.register .form-holder form fieldset button {
+  width: 505px;
+  height: 35px;
+  margin-top: 9px;
+  border-radius: 7px;
+  outline: none;
+  background: #3407fc;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+}
+.register .attribution-holder {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: #e7e4e4;
+  letter-spacing: 2px;
+  margin-top: -6px;
+}
+.register .attribution-holder .attribution {
+  font-family: "Space Grotesk", sans-serif;
+}
+.register .attribution-holder .attribution span {
+  color: #74db55;
+}
+
+.login {
+  width: 100%;
+  height: 100vh;
+  background: #617fe4;
+}
+.login header {
+  width: 100%;
+  background: rgba(72, 201, 233, 0.8823529412);
+  margin-bottom: 40px;
+  box-shadow: 0px 2px 0px rgba(37, 37, 37, 0.479);
+}
+.login header nav {
+  width: 100%;
+}
+.login header nav .name-greeting-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+.login header nav .name-greeting-holder .logo {
+  font-style: italic;
+  color: #1726f8;
+}
+.login .form-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.login .form-holder form {
+  border-radius: 13px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #ffffff;
+  box-shadow: 0px 2px 0px rgba(37, 37, 37, 0.4784313725);
+  border: 1.5px solid rgba(0, 0, 0, 0.5333333333);
+}
+.login .form-holder form fieldset {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  border-radius: 0 0 13px 13px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid rgba(48, 47, 47, 0.3568627451);
+  outline: none;
+  padding: 0 12px;
+  padding-bottom: 20px;
+}
+.login .form-holder form fieldset legend {
+  font-size: 25px;
+  font-weight: 600;
+  color: hsl(251, 98%, 61%);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+.login .form-holder form fieldset .greeting {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 15px 0;
+}
+.login .form-holder form fieldset .greeting h3 {
+  font-size: 25px;
+  color: rgba(0, 0, 255, 0.8784313725);
+}
+.login .form-holder form fieldset .greeting p {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.login .form-holder form fieldset div label {
+  font-size: 18px;
+}
+.login .form-holder form fieldset div input {
+  width: 500px;
+  height: 35px;
+  margin-top: 9px;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid #3407fc;
+}
+.login .form-holder form fieldset .alt-text {
+  text-align: right;
+  margin: -9px 0;
+}
+.login .form-holder form fieldset .alt-text p a {
+  text-decoration: none;
+  color: #0000ff;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+}
+.login .form-holder form fieldset button {
+  width: 505px;
+  height: 35px;
+  margin-top: 9px;
+  border-radius: 7px;
+  outline: none;
+  background: #3407fc;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+}
+.login .attribution-holder {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: #e7e4e4;
+  letter-spacing: 2px;
+  margin-top: 60px;
+  margin-bottom: -60px;
+}
+.login .attribution-holder .attribution {
+  font-family: "Space Grotesk", sans-serif;
+}
+.login .attribution-holder .attribution span {
+  color: #74db55;
+}
+
+.delete {
+  width: 100%;
+  height: 100vh;
+  background: #617fe4;
+}
+.delete header {
+  width: 100%;
+  background: rgba(72, 201, 233, 0.8823529412);
+  box-shadow: 0px 2px 0px rgba(37, 37, 37, 0.479);
+}
+.delete header nav {
+  width: 100%;
+}
+.delete header nav .name-greeting-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+.delete header nav .name-greeting-holder .logo {
+  font-style: italic;
+  color: #1726f8;
+}
+.delete .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 40vh;
+  margin-top: 60px;
+}
+.delete .container .inner-container {
+  border-radius: 13px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #ffffff;
+  box-shadow: 0px 2px 0px rgba(37, 37, 37, 0.4784313725);
+  border: 1.5px solid rgba(0, 0, 0, 0.5333333333);
+  padding: 12px;
+}
+.delete .container .inner-container h3 {
+  font-size: 25px;
+  color: blue;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+.delete .container .inner-container form {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+}
+.delete .container .inner-container form .p {
+  font-size: 19px;
+  line-height: 3;
+  color: #5c7eec;
+}
+.delete .container .inner-container form span {
+  font-size: 17px;
+  color: #575758;
+  margin-left: 10px;
+}
+.delete .container .inner-container form span p {
+  font-size: 15px;
+  color: #000;
+  letter-spacing: 1;
+  margin-left: 9px;
+  line-height: 1.7;
+}
+.delete .container .inner-container form .buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+.delete .container .inner-container form .buttons a {
+  padding: 15px;
+  color: #f8f4f4;
+  background-color: #3b3b3b;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+}
+.delete .container .inner-container form .buttons button {
+  padding: 15px;
+  color: #f8f4f4;
+  background-color: #ff0505;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+}
+.delete .attribution-holder {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: #e7e4e4;
+  letter-spacing: 2px;
+  margin-top: 60px;
+  margin-bottom: -60px;
+}
+.delete .attribution-holder .attribution {
+  font-family: "Space Grotesk", sans-serif;
+}
+.delete .attribution-holder .attribution span {
+  color: #74db55;
+}
+
+.delete-all {
+  width: 100%;
+  height: 100vh;
+  background: #617fe4;
+}
+.delete-all header {
+  width: 100%;
+  background: rgba(72, 201, 233, 0.8823529412);
+  box-shadow: 0px 2px 0px rgba(37, 37, 37, 0.479);
+}
+.delete-all header nav {
+  width: 100%;
+}
+.delete-all header nav .name-greeting-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+.delete-all header nav .name-greeting-holder .logo {
+  font-style: italic;
+  color: #1726f8;
+}
+.delete-all .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 70px;
+}
+.delete-all .container .inner-container {
+  border-radius: 13px;
+  width: 700px;
+  background: #ffffff;
+  box-shadow: 0px 2px 0px rgba(37, 37, 37, 0.4784313725);
+  border: 1.5px solid rgba(0, 0, 0, 0.5333333333);
+  padding: 12px;
+}
+.delete-all .container .inner-container form {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+}
+.delete-all .container .inner-container form p {
+  font-size: 20px;
+  color: #0000ff;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+.delete-all .container .inner-container form .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+.delete-all .container .inner-container form .buttons a {
+  padding: 15px;
+  color: #f8f4f4;
+  background-color: #3b3b3b;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+}
+.delete-all .container .inner-container form .buttons button {
+  padding: 15px;
+  color: #f8f4f4;
+  background-color: #ff0505;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+}
+.delete-all .attribution-holder {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: #e7e4e4;
+  letter-spacing: 2px;
+  margin-top: 60px;
+  margin-bottom: -60px;
+}
+.delete-all .attribution-holder .attribution {
+  font-family: "Space Grotesk", sans-serif;
+}
+.delete-all .attribution-holder .attribution span {
+  color: #74db55;
+}
+
+@media screen and (max-width: 425px) {
+  .temperature-calculator .container header nav .name-greeting-holder ul li a {
+    font-size: 16px;
+  }
+  .temperature-calculator .container .greeting {
+    font-size: 24px;
+  }
+  .temperature-calculator .container .greeting p .blink {
+    font-size: 30px;
+  }
+  .temperature-calculator .container .temperature-calculator-holder {
+    gap: 3em;
+  }
+  .temperature-calculator .container .temperature-calculator-holder .temperature-holder {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 3em;
+    padding: 12px;
+  }
+  .temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .first-keys button {
+    width: 80px;
+    height: 40px;
+  }
+  .temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .first-keys .dot-key-holder {
+    width: 80px;
+    height: 40px;
+  }
+  .temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .second-keys button {
+    width: 80px;
+    height: 40px;
+  }
+  .temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .third-keys button {
+    width: 80px;
+    height: 40px;
+  }
+  .temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .fourth-keys button {
+    width: 80px;
+    height: 40px;
+  }
+  .temperature-calculator .container .temperature-calculator-holder .temperature-holder .calculator-keys .fifth-keys button {
+    width: 80px;
+    height: 40px;
+  }
+  .temperature-calculator .container .temperature-calculator-holder .temperature-holder .form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .temperature-calculator .container .temperature-calculator-holder .temperature-holder .form .temp_value {
+    font-size: 2.5em;
+  }
+  .temperature-calculator .container .temperature-calculator-holder .temperature-holder .form select {
+    font-size: 15px;
+    padding: 10px 0px;
+  }
+  .temperature-calculator .container .temperature-calculator-holder .temperature-holder .form select option {
+    padding: 15px;
+  }
+  .temperature-calculator .container .temperature-calculator-holder .temperature-holder .form .result {
+    font-size: 2.5em;
+  }
+  .temperature-calculator .container .temperature-calculator-holder .attribution-holder {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .history-holder .container .history-title h1 {
+    font-size: 20px;
+  }
+  .history-holder .container .history-conversion-holder {
+    padding: 0 13px;
+  }
+  .history-holder .container .history-conversion-holder .history {
+    width: 100%;
+    height: 470px;
+  }
+  .history-holder .container .history-conversion-holder .history .delete-history a {
+    font-size: 18px;
+  }
+  .history-holder .container .history-conversion-holder .history .history-flex .first-table thead tr th {
+    font-size: 18.2px;
+  }
+  .history-holder .container .history-conversion-holder .history .history-flex .first-table thead tr .th-col {
+    padding-left: 14px;
+  }
+  .history-holder .container .history-conversion-holder .history .history-flex .conversions {
+    padding: 0px 7px;
+  }
+  .history-holder .container .history-conversion-holder .history .history-flex .conversions tbody {
+    font-size: 12px;
+  }
+  .history-holder .container .history-conversion-holder .history .history-flex .conversions tbody tr .td-row {
+    padding: 10px;
+  }
+  .history-holder .container .history-conversion-holder .history .history-flex .conversions tbody tr .del a {
+    margin-left: 6px;
+  }
+  .history-holder .container .history-conversion-holder .history .history-flex div p {
+    font-size: 26px;
+  }
+  .history-holder .container .history-conversion-holder .attribution-holder {
+    font-size: 18px;
+  }
+  .register .form-holder {
+    padding: 42px 20px;
+  }
+  .register .form-holder form fieldset {
+    gap: 13px;
+  }
+  .register .form-holder form fieldset .form-title {
+    font-size: 21px;
+  }
+  .register .form-holder form fieldset .greeting h3 {
+    font-size: 20px;
+  }
+  .register .form-holder form fieldset .greeting p {
+    font-size: 11px;
+  }
+  .register .form-holder form fieldset div label {
+    font-size: 16px;
+  }
+  .register .form-holder form fieldset div input {
+    width: 330px;
+  }
+  .register .form-holder form fieldset .name {
+    gap: 13px;
+  }
+  .register .form-holder form fieldset .name div label {
+    font-size: 16px;
+  }
+  .register .form-holder form fieldset .name div input {
+    width: 158px;
+  }
+  .register .form-holder form fieldset .alt-text p {
+    font-size: 14px;
+  }
+  .register .form-holder form fieldset .alt-text p a {
+    font-size: 17px;
+  }
+  .register .form-holder form fieldset button {
+    width: 328px;
+    font-size: 16px;
+  }
+  .register .attribution-holder {
+    font-size: 18px;
+    margin-top: 13px;
+  }
+  .login .form-holder {
+    padding: 0 20px;
+  }
+  .login .form-holder form fieldset {
+    gap: 13px;
+  }
+  .login .form-holder form fieldset legend {
+    font-size: 21px;
+  }
+  .login .form-holder form fieldset .greeting h3 {
+    font-size: 20px;
+  }
+  .login .form-holder form fieldset .greeting p {
+    font-size: 11px;
+  }
+  .login .form-holder form fieldset div label {
+    font-size: 16px;
+  }
+  .login .form-holder form fieldset div input {
+    width: 330px;
+  }
+  .login .form-holder form fieldset .alt-text p {
+    font-size: 14px;
+  }
+  .login .form-holder form fieldset .alt-text p a {
+    font-size: 17px;
+  }
+  .login .form-holder form fieldset button {
+    width: 328px;
+    font-size: 16px;
+  }
+  .login .attribution-holder {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: 15px;
+  }
+  .delete .container {
+    padding: 0 20px;
+  }
+  .delete .container .inner-container h3 {
+    font-size: 21px;
+    line-height: 1.3;
+    margin-bottom: 7px;
+  }
+  .delete .container .inner-container form {
+    gap: 6px;
+  }
+  .delete .container .inner-container form .p {
+    font-size: 17px;
+    line-height: 2;
+  }
+  .delete .attribution-holder {
+    font-size: 18px;
+    margin-top: 55px;
+  }
+  .delete-all .container {
+    padding: 0 15px;
+  }
+  .delete-all .container .inner-container {
+    width: 350px;
+    padding: 15px 11px;
+  }
+  .delete-all .container .inner-container form {
+    gap: 11px;
+    margin-left: 0px;
+  }
+  .delete-all .container .inner-container form p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .delete-all .container .inner-container form .buttons {
+    margin-left: 0px;
+  }
+  .delete-all .attribution-holder {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .history-holder .container .history-conversion-holder .history .history-flex div p {
+    font-size: 23px;
+  }
+  .register .form-holder form fieldset div input {
+    width: 300px;
+  }
+  .register .form-holder form fieldset .name div input {
+    width: 144px;
+  }
+  .register .form-holder form fieldset button {
+    width: 305px;
+  }
+  .login .form-holder form fieldset div input {
+    width: 300px;
+  }
+  .login .form-holder form fieldset button {
+    width: 305px;
+  }
+  .delete-all .container .inner-container form {
+    gap: 8px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .temperature-calculator .container .greeting {
+    font-size: 22px;
+  }
+  .history-holder .container .history-conversion-holder .history .history-flex .first-table thead tr .th-col {
+    padding-left: 12px;
+  }
+  .register .form-holder form fieldset div input {
+    width: 260px;
+  }
+  .register .form-holder form fieldset .name div input {
+    width: 122px;
+  }
+  .register .form-holder form fieldset button {
+    width: 265px;
+  }
+  .login .form-holder form fieldset div input {
+    width: 260px;
+  }
+  .login .form-holder form fieldset button {
+    width: 265px;
+    font-size: 16px;
+  }
+  .delete .container {
+    padding: 0 11px;
+  }
+  .delete-all .container {
+    padding: 0 20px;
+  }
+  .delete-all .container .inner-container {
+    width: 300px;
+    padding: 6px;
+  }
+  .delete-all .container .inner-container form {
+    gap: 6px;
+  }
+  .delete-all .container .inner-container form p {
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=styles.css.map */

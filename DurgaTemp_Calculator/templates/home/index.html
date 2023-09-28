@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <title>Durga-Temp Calulator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/style.js' %}"></script>
+</head>
+<body>
+    <div class="temperature-calculator">
+        <div class="container">
+            {% if request.user.is_authenticated %}
+                <header>
+                    <nav>
+                        <div class="name-greeting-holder">
+                            <h2 class="logo">Durga</h2>
+                            <ul>
+                                <li><a href="{% url 'home:history' %}">history</a></li>
+                                <li><a href="{% url 'home:logout' %}">logout</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+            {% endif %}
+            <div class="greeting">
+                <p>
+                    <span id="greeting"></span><span class="user">{{request.user}}</span><span class="blink">|</span>
+                </p>
+            </div>
+            <div class="temperature-calculator-holder">
+                <div class="temperature-holder">
+                    <div class="calculator-keys">
+                        <div class="first-keys">
+                            <button class="del-key">d</button>
+                            <button class="del-all-key">del</button>
+                            <div class="dot-key-holder">
+                                <button class="dot-key key">.</button>
+                            </div>
+                        </div>
+                        <div class="second-keys">
+                            <button class="key">7</button>
+                            <button class="key">8</button>
+                            <button class="key">9</button>
+                        </div>
+                        <div class="third-keys">
+                            <button class="key">4</button>
+                            <button class="key">5</button>
+                            <button class="key">6</button>
+                        </div>
+                        <div class="fourth-keys">
+                            <button class="key">1</button>
+                            <button class="key">2</button>
+                            <button class="key">3</button>
+                        </div>
+                        <div class="fifth-keys">
+                            <button class="plus">+</button>
+                            <button class="zero key">0</button>
+                            <button class="minus">-</button>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <div class="temp_value" name="temperature" id="temperature">0</div>
+                        <select name="from_temp" id="from_temp">
+                            <option value="celsius">Celsius</option>
+                            <option value="kelvin">Kelvin</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                        </select>
+                        <br>
+                        <div class="result" id="converted"></div>
+                        <select name="to_temp" id="to_temp">
+                            <option value="fahrenheit" selected>Fahrenheit</option>
+                            <option value="celsius">Celsius</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                        <br>
+                    </div>
+                </div>
+                <div class="attribution-holder">
+                    <p class="attribution">&copy; copyright 2023 coded by <span>Boss(Aniebiet)</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
