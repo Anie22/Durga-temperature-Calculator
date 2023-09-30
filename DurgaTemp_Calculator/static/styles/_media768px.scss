@@ -1,0 +1,17 @@
+@media screen and (max-width: 768px) {
+    .page{
+
+        .top-view{
+            height: 100vh;
+            justify-content: center;
+
+            .text1{
+                margin-left: 8em;
+            }
+        }
+
+        .buttom-view{
+            display: none;
+        }
+    }
+}

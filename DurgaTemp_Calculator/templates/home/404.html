@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <title>Document</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <div class="page">
+        <div class="top-view py-5 d-flex align-items-center flex-column">
+            <div class="text1 container">
+                <h2>Oops!</h2>
+            </div>
+            <div class="text2">
+                <p>Page not found</p>
+            </div>
+            <div class="button">
+                <a href="{% url 'home:temperature_converter' %}">Return to homepage</a>
+            </div>
+        </div>
+        <div class="buttom-view">
+            <div class="circle-holder px-5 d-flex flex-column">
+                <div class="first-circle-holder">
+                    <div class="first d-flex justify-content-between flex-row-reverse">
+                        <div class="ball1">
+                            <div class="ball"></div>
+                        </div>
+                        <div class="ball2">
+                            <div class="ball"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-circle-holder">
+                    <div class="second d-flex justify-content-between">
+                        <div class="ball1">
+                            <div class="ball"></div>
+                        </div>
+                        <div class="ball2">
+                            <div class="ball"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

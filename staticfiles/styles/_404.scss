@@ -1,0 +1,160 @@
+.page{
+
+    .top-view{
+        background: #2626f8;
+        height: fit-content;
+        gap: 12px;
+
+        .text1{
+            transform: perspective(1126px) rotateY(-309deg);
+            width: 100%;
+            margin-left: 25em;
+
+            h2{
+                top: 0; 
+                font-size: 10em; 
+                font-weight: 700; 
+                text-shadow: -1px -1px 1px #919191, 
+                -2px -2px 1px #919191, 
+                -3px -3px 1px #919191, 
+                -4px -4px 1px #919191, 
+                -5px -5px 1px #919191, 
+                -6px -6px 1px #919191, 
+                -7px -7px 1px #919191, 
+                -8px -8px 1px #919191, 
+                -9px -9px 1px #919191, 
+                -10px -10px 1px #919191, 
+                -1px -18px 6px rgb(16, 16, 16, 0.4), 
+                -1px -22px 10px rgb(16, 16, 16, 0.2), 
+                -1px -25px 35px rgba(16, 16, 16, 0.2), 
+                -1px -30px 60px rgb(16, 16, 16, 0.4); 
+                color: #f5f5f5; 
+                transition: 0.9s all; 
+                text-transform: uppercase;
+            }
+        }
+
+        .text2{
+
+            p{
+                position: relative;
+                z-index: 2;
+                font-size: 22px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-weight: 500;
+                letter-spacing: 1px;
+                color: #f5f5f5;
+            }
+        }
+
+        .button{
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+
+            a{
+                background: #ff0000;
+                padding: 18px;
+                border-radius: 10px;
+                box-shadow: -3px 5px 4px #f75a5a, -6px -1px 4px #f75a5a, -3px 5px 4px rgb(16, 16, 16, 0.3);
+                color: #f5f5f5;
+                text-decoration: none;
+                font-size: 20px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                transition: 1s all;
+                animation: bouns 0.7s linear infinite;
+
+                &:hover{
+                    animation-play-state: paused;
+                    background: #f5f5f5;
+                    box-shadow: -3px 5px 4px #8a8a8a, -6px -1px 4px #8a8a8a;
+                    color: #1b1b1b !important;
+                }
+
+                @keyframes bouns {
+                    0% {
+                        transform: translateY(0);
+                    }
+                    100%{
+                        transform: translateY(-8px);
+                    }
+                }
+            }
+        }
+    }
+
+    .buttom-view{
+        background: hsl(240, 80%, 63%);
+
+        .circle-holder{
+            gap: 20px;
+            padding-top: 18px;
+            padding-bottom: 18px;
+
+            .first-circle-holder{
+
+                .first{
+                    
+                    .ball1{
+
+                        .ball{
+                            height: 80px;
+                            width: 80px;
+                            background: radial-gradient(circle at 25% 70%, #fff 1px, #2132c9 63%, #1a17e7 80%, #331ef0 70%);
+                            border-radius: 50%;
+                            animation: spin 0.9s linear infinite;
+                        }
+                    }
+
+                    .ball2{
+
+                        .ball{
+                            height: 80px;
+                            width: 80px;
+                            background: radial-gradient(circle at 65% 70%, #fff 1px, #d12020 63%, #e71717 80%, #f01e1e 70%);
+                            border-radius: 50%;
+                            animation: spin 0.9s linear infinite;
+                        }
+                    }
+                }
+            }
+            .second-circle-holder{
+
+                .second{
+                    
+                    .ball1{
+
+                        .ball{
+                            height: 80px;
+                            width: 80px;
+                            background: radial-gradient(circle at 115% 70%, #fff 1px, #c9be21 63%, #e4e717 80%, #f0ec1e 70%);
+                            border-radius: 50%;
+                            animation: spin 0.9s linear infinite;
+                        }
+                    }
+
+                    .ball2{
+
+                        .ball{
+                            height: 80px;
+                            width: 80px;
+                            background: radial-gradient(circle at 15% 70%, #fff 1px, #26d120 63%, #28e717 80%, #1ef02f 70%);
+                            border-radius: 50%;
+                            animation: spin 0.9s linear infinite;
+                        }
+                    }
+                }
+            }
+
+            @keyframes spin{
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                100%{
+                    transform: rotateZ(360deg);
+                }
+            }
+        }
+    }
+}

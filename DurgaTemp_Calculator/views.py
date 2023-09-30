@@ -8,11 +8,14 @@ from DurgaTemp_Calculator.models import History
 
 # Create your views here.
 
-@login_required(login_url='login/')
+@login_required(login_url='account/login/')
 def temperature_converter(request):
     return render(request, 'home/index.html')
 
-@login_required(login_url='login/')
+def my_404_view(request, exception):
+    return render(request, 'home/404.html')
+
+@login_required(login_url='account/login/')
 def convert_temperature(request):
     temperature = request.GET.get('temperature', '0')
     from_unit = request.GET.get('from_unit')
@@ -58,7 +61,7 @@ def convert_temperature(request):
 
     return JsonResponse({'converted': round(converted, 0)})
 
-@login_required(login_url='login/')
+@login_required(login_url='account/login/')
 def conversion_history(request):
     conversion_history_results = History.objects.all()
 
@@ -102,7 +105,7 @@ def register(request):
     if request.user.is_authenticated:
         return redirect('home:temperature_converter')    
 
-    return render(request, 'home/register.html')
+    return render(request, 'account/register.html')
 
 def login_view(request):
     if request.method == 'POST':
@@ -116,13 +119,13 @@ def login_view(request):
     if request.user.is_authenticated:
         return redirect('home:temperature_converter')
 
-    return render(request, 'home/login.html')
+    return render(request, 'account/login.html')
 
 def logout_view(request):
     logout(request)
     return redirect('home:login')
 
-@login_required(login_url='login/')
+@login_required(login_url='account/login/')
 def delete(request, id):
     remove_item = History.objects.get(id=id, User=request.user)  
     if request.method == 'POST':
@@ -133,7 +136,7 @@ def delete(request, id):
 
   
 
-@login_required(login_url='login/')
+@login_required(login_url='account/login/')
 def delete_all(request):
     if request.method == 'GET':  
         history = History.objects.all()

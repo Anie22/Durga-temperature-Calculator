@@ -21,3 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("DurgaTemp_Calculator.urls")),
 ]
+
+handler404 = 'DurgaTemp_Calculator.views.my_404_view'

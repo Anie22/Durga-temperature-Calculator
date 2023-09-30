@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-j@cb0b==whkb%#^_x#mtpm8bx*s95thlezn(rlnk@31thkb9qq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
     'DurgaTemp_Calculator.apps.DurgaTemp_CalculatorConfig',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -115,7 +116,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-LOGIN_URL = 'login/'
+LOGIN_URL = 'account/login/'
 
 
 # Static files (CSS, JavaScript, Images)

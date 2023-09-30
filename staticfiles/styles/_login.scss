@@ -126,16 +126,17 @@
     }
 
     .attribution-holder{
-        text-align: center;
-        text-transform: capitalize;
-        font-size: 20px;
-        color: #e7e4e4;
-        letter-spacing: 2px;
         margin-top: 60px;
         margin-bottom: -60px;
 
         .attribution{
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 20px;
+            color: #e7e4e4;
+            letter-spacing: 2px;
             font-family: 'Space Grotesk', sans-serif;
+            text-decoration: none;
 
             span{
                 color: #74db55;

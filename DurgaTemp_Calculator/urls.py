@@ -8,9 +8,9 @@ urlpatterns = [
     path('', login_required(temperature_converter), name='temperature_converter'),
     path('convert_temperature/', convert_temperature, name='convert_temperature'),
     path('history/', conversion_history, name='history'),
-    path('signup/', register, name='register'),
-    path('login/', login_view, name='login'),
+    path('account/signup/', register, name='register'),
+    path('account/login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
     path('delete/<int:id>/', delete, name='delete'),
-    path('delete/', delete_all, name='delete_all'),
+    path('delete/', delete_all, name='delete_all')
 ]

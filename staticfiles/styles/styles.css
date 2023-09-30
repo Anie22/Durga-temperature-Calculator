@@ -267,16 +267,17 @@ body {
   text-overflow: ellipsis;
 }
 .temperature-calculator .container .temperature-calculator-holder .attribution-holder {
+  margin-top: -43px;
+  margin-bottom: 20px;
+}
+.temperature-calculator .container .temperature-calculator-holder .attribution-holder .attribution {
   text-align: center;
   text-transform: capitalize;
   font-size: 20px;
   color: #e7e4e4;
   letter-spacing: 2px;
-  margin-top: -43px;
-  margin-bottom: 20px;
-}
-.temperature-calculator .container .temperature-calculator-holder .attribution-holder .attribution {
   font-family: "Space Grotesk", sans-serif;
+  text-decoration: none;
 }
 .temperature-calculator .container .temperature-calculator-holder .attribution-holder .attribution span {
   color: #74db55;
@@ -397,16 +398,17 @@ body {
   color: #1739f8;
 }
 .history-holder .container .history-conversion-holder .attribution-holder {
+  margin-top: -60px;
+  margin-bottom: 10px;
+}
+.history-holder .container .history-conversion-holder .attribution-holder .attribution {
   text-align: center;
   text-transform: capitalize;
   font-size: 20px;
   color: #e7e4e4;
   letter-spacing: 2px;
-  margin-top: -60px;
-  margin-bottom: 10px;
-}
-.history-holder .container .history-conversion-holder .attribution-holder .attribution {
   font-family: "Space Grotesk", sans-serif;
+  text-decoration: none;
 }
 .history-holder .container .history-conversion-holder .attribution-holder .attribution span {
   color: #74db55;
@@ -534,15 +536,16 @@ body {
   font-size: 16px;
 }
 .register .attribution-holder {
+  margin-top: -6px;
+}
+.register .attribution-holder .attribution {
   text-align: center;
   text-transform: capitalize;
   font-size: 20px;
   color: #e7e4e4;
   letter-spacing: 2px;
-  margin-top: -6px;
-}
-.register .attribution-holder .attribution {
   font-family: "Space Grotesk", sans-serif;
+  text-decoration: none;
 }
 .register .attribution-holder .attribution span {
   color: #74db55;
@@ -656,16 +659,17 @@ body {
   font-size: 16px;
 }
 .login .attribution-holder {
+  margin-top: 60px;
+  margin-bottom: -60px;
+}
+.login .attribution-holder .attribution {
   text-align: center;
   text-transform: capitalize;
   font-size: 20px;
   color: #e7e4e4;
   letter-spacing: 2px;
-  margin-top: 60px;
-  margin-bottom: -60px;
-}
-.login .attribution-holder .attribution {
   font-family: "Space Grotesk", sans-serif;
+  text-decoration: none;
 }
 .login .attribution-holder .attribution span {
   color: #74db55;
@@ -766,16 +770,17 @@ body {
   font-size: 15px;
 }
 .delete .attribution-holder {
+  margin-top: 60px;
+  margin-bottom: -60px;
+}
+.delete .attribution-holder .attribution {
   text-align: center;
   text-transform: capitalize;
   font-size: 20px;
   color: #e7e4e4;
   letter-spacing: 2px;
-  margin-top: 60px;
-  margin-bottom: -60px;
-}
-.delete .attribution-holder .attribution {
   font-family: "Space Grotesk", sans-serif;
+  text-decoration: none;
 }
 .delete .attribution-holder .attribution span {
   color: #74db55;
@@ -856,21 +861,145 @@ body {
   font-size: 15px;
 }
 .delete-all .attribution-holder {
+  margin-top: 60px;
+  margin-bottom: -60px;
+}
+.delete-all .attribution-holder .attribution {
   text-align: center;
   text-transform: capitalize;
   font-size: 20px;
   color: #e7e4e4;
   letter-spacing: 2px;
-  margin-top: 60px;
-  margin-bottom: -60px;
-}
-.delete-all .attribution-holder .attribution {
   font-family: "Space Grotesk", sans-serif;
+  text-decoration: none;
 }
 .delete-all .attribution-holder .attribution span {
   color: #74db55;
 }
 
+.page .top-view {
+  background: #2626f8;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 12px;
+}
+.page .top-view .text1 {
+  transform: perspective(1126px) rotateY(-309deg);
+  width: 100%;
+  margin-left: 25em;
+}
+.page .top-view .text1 h2 {
+  top: 0;
+  font-size: 10em;
+  font-weight: 700;
+  text-shadow: -1px -1px 1px #919191, -2px -2px 1px #919191, -3px -3px 1px #919191, -4px -4px 1px #919191, -5px -5px 1px #919191, -6px -6px 1px #919191, -7px -7px 1px #919191, -8px -8px 1px #919191, -9px -9px 1px #919191, -10px -10px 1px #919191, -1px -18px 6px rgba(16, 16, 16, 0.4), -1px -22px 10px rgba(16, 16, 16, 0.2), -1px -25px 35px rgba(16, 16, 16, 0.2), -1px -30px 60px rgba(16, 16, 16, 0.4);
+  color: #f5f5f5;
+  transition: 0.9s all;
+  text-transform: uppercase;
+}
+.page .top-view .text2 p {
+  position: relative;
+  z-index: 2;
+  font-size: 22px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #f5f5f5;
+}
+.page .top-view .button {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.page .top-view .button a {
+  background: #ff0000;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: -3px 5px 4px #f75a5a, -6px -1px 4px #f75a5a, -3px 5px 4px rgba(16, 16, 16, 0.3);
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  transition: 1s all;
+  animation: bouns 0.7s linear infinite;
+}
+.page .top-view .button a:hover {
+  animation-play-state: paused;
+  background: #f5f5f5;
+  box-shadow: -3px 5px 4px #8a8a8a, -6px -1px 4px #8a8a8a;
+  color: #1b1b1b !important;
+}
+@keyframes bouns {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+.page .buttom-view {
+  background: hsl(240, 80%, 63%);
+}
+.page .buttom-view .circle-holder {
+  gap: 20px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.page .buttom-view .circle-holder .first-circle-holder .first .ball1 .ball {
+  height: 80px;
+  width: 80px;
+  background: radial-gradient(circle at 25% 70%, #fff 1px, #2132c9 63%, #1a17e7 80%, #331ef0 70%);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+.page .buttom-view .circle-holder .first-circle-holder .first .ball2 .ball {
+  height: 80px;
+  width: 80px;
+  background: radial-gradient(circle at 65% 70%, #fff 1px, #d12020 63%, #e71717 80%, #f01e1e 70%);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+.page .buttom-view .circle-holder .second-circle-holder .second .ball1 .ball {
+  height: 80px;
+  width: 80px;
+  background: radial-gradient(circle at 115% 70%, #fff 1px, #c9be21 63%, #e4e717 80%, #f0ec1e 70%);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+.page .buttom-view .circle-holder .second-circle-holder .second .ball2 .ball {
+  height: 80px;
+  width: 80px;
+  background: radial-gradient(circle at 15% 70%, #fff 1px, #26d120 63%, #28e717 80%, #1ef02f 70%);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .page .top-view .text1 {
+    margin-left: 15em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page .top-view {
+    height: 100vh;
+    justify-content: center;
+  }
+  .page .top-view .text1 {
+    margin-left: 8em;
+  }
+  .page .buttom-view {
+    display: none;
+  }
+}
 @media screen and (max-width: 425px) {
   .temperature-calculator .container header nav .name-greeting-holder ul li a {
     font-size: 16px;
@@ -933,7 +1062,7 @@ body {
   .temperature-calculator .container .temperature-calculator-holder .temperature-holder .form .result {
     font-size: 2.5em;
   }
-  .temperature-calculator .container .temperature-calculator-holder .attribution-holder {
+  .temperature-calculator .container .temperature-calculator-holder .attribution-holder .attribution {
     font-size: 18px;
     line-height: 1.5;
   }
@@ -971,7 +1100,7 @@ body {
   .history-holder .container .history-conversion-holder .history .history-flex div p {
     font-size: 26px;
   }
-  .history-holder .container .history-conversion-holder .attribution-holder {
+  .history-holder .container .history-conversion-holder .attribution-holder .attribution {
     font-size: 18px;
   }
   .register .form-holder {
@@ -1015,8 +1144,10 @@ body {
     font-size: 16px;
   }
   .register .attribution-holder {
-    font-size: 18px;
     margin-top: 13px;
+  }
+  .register .attribution-holder .attribution {
+    font-size: 18px;
   }
   .login .form-holder {
     padding: 0 20px;
@@ -1050,9 +1181,11 @@ body {
     font-size: 16px;
   }
   .login .attribution-holder {
-    font-size: 18px;
     margin-top: 16px;
     margin-bottom: 15px;
+  }
+  .login .attribution-holder .attribution {
+    font-size: 18px;
   }
   .delete .container {
     padding: 0 20px;
@@ -1070,8 +1203,10 @@ body {
     line-height: 2;
   }
   .delete .attribution-holder {
-    font-size: 18px;
     margin-top: 55px;
+  }
+  .delete .attribution-holder .attribution {
+    font-size: 18px;
   }
   .delete-all .container {
     padding: 0 15px;
@@ -1092,8 +1227,13 @@ body {
     margin-left: 0px;
   }
   .delete-all .attribution-holder {
-    font-size: 18px;
     margin-top: 40px;
+  }
+  .delete-all .attribution-holder .attribution {
+    font-size: 18px;
+  }
+  .page .top-view .text1 {
+    margin-left: 0em;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1117,6 +1257,9 @@ body {
   }
   .delete-all .container .inner-container form {
     gap: 8px;
+  }
+  .page .top-view .text1 {
+    margin-left: -1em;
   }
 }
 @media screen and (max-width: 320px) {
@@ -1157,5 +1300,8 @@ body {
   }
   .delete-all .container .inner-container form p {
     font-size: 17px;
+  }
+  .page .top-view .text1 {
+    margin-left: -2em;
   }
 }/*# sourceMappingURL=styles.css.map */
