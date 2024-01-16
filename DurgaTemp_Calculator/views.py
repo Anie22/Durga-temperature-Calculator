@@ -145,3 +145,4 @@ def delete_all(request):
             conversion_history.delete()
             return redirect('home:history')    
         return render(request, 'home/delete_all.html', {'history':history, 'conversion_history':conversion_history})
+
