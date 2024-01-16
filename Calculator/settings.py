@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
     'DurgaTemp_Calculator.apps.DurgaTemp_CalculatorConfig',
-    'bootstrap5',
+    # 'bootstrap5',
 ]
 
 MIDDLEWARE = [
